@@ -9,6 +9,9 @@ services:
       - type: volume
         source: letsencrypt
         target: /etc/letsencrypt
+      - type: volume
+        source: nginx-logs
+        target: /var/log
   idkwheretogo:
     build: /srv/idkwheretogo/www
     expose:
@@ -17,5 +20,10 @@ services:
       - type: bind
         source: /srv/idkwheretogo/www
         target: /srv/idkwheretogo/www
+      - type: volume
+        source: idkwheretogo-logs
+        target: /var/log
 volumes:
+  idkwheretogo-logs:
   letsencrypt:
+  nginx-logs:
