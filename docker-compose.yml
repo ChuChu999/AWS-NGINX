@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  nginx:
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - type: volume
+        source: letsencrypt
+        target: /etc/letsencrypt
+  idkwheretogo:
+    build: /srv/idkwheretogo/www
+    expose:
+      - "5000"
+    volumes:
+      - type: bind
+        source: /srv/idkwheretogo/www
+        target: /srv/idkwheretogo/www
+volumes:
+  letsencrypt:
