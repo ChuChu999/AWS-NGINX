@@ -12,7 +12,7 @@ services:
       - type: volume
         source: nginx-logs
         target: /var/log
-  idkwheretogo:
+  wheretogo:
     build: /srv/idkwheretogo/www
     expose:
       - "5000"
@@ -21,9 +21,9 @@ services:
         source: /srv/idkwheretogo/www
         target: /srv/idkwheretogo/www
       - type: volume
-        source: idkwheretogo-logs
+        source: wheretogo-logs
         target: /var/log
 volumes:
-  idkwheretogo-logs:
+  wheretogo-logs:
   letsencrypt:
   nginx-logs:

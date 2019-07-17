@@ -21,6 +21,6 @@ server {
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
     location / {
-        proxy_pass http://idkwheretogo:5000;
+        proxy_pass http://wheretogo:5000;
     }
 }
