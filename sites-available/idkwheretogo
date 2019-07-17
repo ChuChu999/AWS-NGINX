@@ -2,6 +2,24 @@ server {
     listen 80;
     server_name idkwheretogo.com www.idkwheretogo.com;
 
+    return 301 https://www.idkwheretogo.com$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name idkwheretogo.com;
+
+    return 301 https://www.idkwheretogo.com$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name www.idkwheretogo.com;
+    ssl_certificate /etc/letsencrypt/live/idkwheretogo.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/idkwheretogo.com/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
     location / {
         proxy_pass http://idkwheretogo:5000;
     }
