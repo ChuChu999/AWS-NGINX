@@ -13,7 +13,7 @@ server {
 }
 
 server {
-    listen 443 ssl;
+    listen 443 ssl default_server;
     server_name www.idkwheretogo.com;
     ssl_certificate /etc/letsencrypt/live/idkwheretogo.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/idkwheretogo.com/privkey.pem;
