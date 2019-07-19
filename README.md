@@ -8,7 +8,7 @@ Dockerized NGINX configuration for my Amazon EC2 instance
 
 ### How to Install SSL Certificates
 - `docker exec -it nginx_nginx_1 sh` to log into the nginx container
-- `certbot` to walk-through the certbot letsencrypt installer
+- `certbot` to walk-through the certbot letsencrypt wizard (no need to allow certbot to handle https redirects)
 
 ### How to Enable HTTPS
 - `cd /etc/nginx/` to navigate to the nginx config files
