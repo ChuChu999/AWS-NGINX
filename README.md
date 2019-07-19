@@ -11,5 +11,6 @@ Dockerized NGINX configuration for my Amazon EC2 instance
 - `certbot` to walk-through the certbot letsencrypt wizard (no need to allow certbot to handle https redirects)
 
 ### How to Enable HTTPS
+- `docker exec -it nginx_nginx_1 sh` if you're not already logged in to the nginx container
 - `cd /etc/nginx/` to navigate to the nginx config files
 - `sh enable-https.sh` to execute the shell script that swaps out the nginx configs in `sites-enabled/`
