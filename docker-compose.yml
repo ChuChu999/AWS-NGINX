@@ -16,13 +16,13 @@ services:
         source: nginx-logs
         target: /var/log
   wheretogo:
-    build: /srv/idkwheretogo/www
+    build: /srv/idkwheretogo.com/www
     expose:
       - "5000"
     volumes:
       - type: bind
-        source: /srv/idkwheretogo/www
-        target: /srv/idkwheretogo/www
+        source: /srv/idkwheretogo.com/www
+        target: /srv/idkwheretogo.com/www
       - type: volume
         source: wheretogo-logs
         target: /var/log
