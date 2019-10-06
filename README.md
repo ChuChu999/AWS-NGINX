@@ -2,7 +2,7 @@
 Dockerized NGINX configuration for my Amazon EC2 instance
 
 ### How to Deploy
-- clone https://github.com/ECE-FIG/WhereToGo into `/srv/idkwheretogo/` as the folder `www/`
+- clone https://github.com/ECE-FIG/WhereToGo into `/srv/idkwheretogo.com/` as the folder `www/`
 - clone https://github.com/ChuChu999/AWS-NGINX into `/srv/` as the folder `nginx/`
 - `docker-compose up` to build the Docker images and launch the containers
 
